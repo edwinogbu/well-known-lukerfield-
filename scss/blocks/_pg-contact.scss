@@ -1,0 +1,99 @@
+/**
+Contact Page Styles
+*/
+
+.pg-contact__content {
+	background: $secondary-color;
+	padding: 40px 30px;
+	color: #fff;
+
+	&>h1 {
+		text-transform: uppercase;
+		padding-right: 50px;
+	}
+
+	&>p {
+		padding-right: 50px;
+	}
+}
+
+.pg-contact__blocks {
+	padding-top: 30px;
+
+	.single-block {
+		font-size: 16px;
+
+		&:not(:last-child){
+			margin-bottom: 30px;
+		}
+
+		h6 {
+			font-size: 16px;
+			text-transform: uppercase;
+			font-weight: 400;
+			color: #ffffff;
+			position: relative;
+
+			&:before {
+				height: 8px;
+				width: 8px;
+				content: "";
+				left: 0;
+				top: -1px;
+				display: inline-block;
+				background: #ffffff;
+				position: relative;
+				margin-right: 15px;
+			}
+		}
+
+		p {
+			color: #b1b1b1;
+			margin-bottom: 0;
+		}
+
+		a {
+			color: #b1b1b1;
+
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+}
+
+
+.google-map {
+	height: 450px;
+}
+
+@media #{$md-layout} {
+	.google-map {
+		height: 300px;
+	}
+
+	.pg-contact__content {
+		margin-top: 80px;
+	}
+}
+
+@media #{$sm-layout} {
+	.google-map {
+		height: 300px;
+	}
+
+	.pg-contact__content {
+		margin-top: 70px;
+	}
+
+	.pg-contact__content {
+		&>h1 {
+			padding-right: 0px;
+			font-size: 24px;
+		}
+
+		&>p {
+			padding-right: 0;
+		}
+	}
+}

@@ -1,0 +1,74 @@
+/**
+About Area
+*/
+
+.about-area__content {
+
+	h4 {
+		text-transform: uppercase;
+		margin-bottom: 5px;
+		color: #474747;
+	}
+
+	h3 {
+		color: #303030;
+		text-transform: uppercase;
+		padding-right: 50px;
+		margin-bottom: 25px;
+	}
+
+	a.cr-btn {
+		margin-top: 27px;
+	}
+}
+
+@media #{$md-layout} {
+	.about-area__image {
+		padding: 50px 0;
+		text-align: center;
+		max-height: auto;
+
+		img {
+			position: relative;
+		}
+	}
+
+	.about-area__content {
+		padding: 0;
+		padding-bottom: 50px;
+	}
+}
+
+@media #{$sm-layout} {
+	.about-area__image {
+		padding: 50px 0;
+		text-align: center;
+		max-height: auto;
+
+		img {
+			max-width: 100%;
+			position: relative;
+		}
+	}
+
+	.about-area__image img {
+		max-width: 100%;
+	}
+
+	.about-area__content {
+		padding: 0;
+		padding-bottom: 50px;
+	}
+}
+
+@media #{$xs-layout} {
+	.about-area__content {
+		padding-left: 0;
+		padding-right: 0;
+
+		h3 {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+}

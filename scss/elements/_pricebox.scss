@@ -1,0 +1,97 @@
+/**
+ * Pricebox
+ */
+
+.pricebox {
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out 0s;
+
+    &-header{
+        background: $bg-grey;
+    }
+
+    &-title{
+        padding: 30px 20px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
+        transition: all 0.3s ease-in-out 0s;
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: #eeeeee;
+            z-index: -1;
+            transform: rotate(-5deg) scale(1.5);
+            margin-top: -20px;
+            transition: all 0.3s ease-in-out 0s;
+        }
+    }
+
+    &-price{
+        font-size: 42px;
+        font-weight: 300;
+        padding: 45px 20px 30px 20px;
+
+        span{
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    &-body {
+        padding: 30px 20px;
+
+        ul {
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+
+            li {
+                list-style: none;
+
+                &:not(:last-child){
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    &-footer {
+        padding: 0 20px 40px 20px;
+    }
+
+    &.is-active{
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    &.is-active &-title{
+        color: #ffffff;
+
+        &::before{
+            background: $theme-color;
+        }
+    }
+
+    &:hover{
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    &:hover &-title{
+        color: #ffffff;
+
+        &::before{
+            background: $theme-color;
+        }
+    }
+}

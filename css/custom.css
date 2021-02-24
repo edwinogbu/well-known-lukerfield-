@@ -1,0 +1,114 @@
+/*********************************************************************************
+
+    Template Name: Fsulting - Financial Consulting Bootstrap 4 Template
+	Description: Fsulting is a beautiful and unique financial & consulting html template which comes with bootstrap 4 framework.
+	Version: 1
+
+	Note: This is custom css. All custom styles (user styles) declare here.
+
+**********************************************************************************/
+
+.header__top{
+	background-color: #566B2A;
+}
+.service{
+	min-height: 290px !important;
+}
+
+.pg-advisor__details{
+	color: #fff;
+}
+
+.funfact a{
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+/*.about-list .check-container{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	float: left;
+}
+
+.div-check{
+	overflow: hidden;
+	margin-bottom: 20px;
+	border-bottom: 2px solid rgba(226, 226, 226, 0.5);
+}
+
+
+.check-container .fa{
+	line-height: 20px;
+	font-size: 1.6rem;
+}
+.about-list .check-content{
+	display: inline-block;
+	float: left;
+}
+*/
+.footer--widgets .widget{
+	flex:1;
+}
+
+.modal-cover{
+	margin-top: 20%;
+}
+
+#exampleModal .modal-body{
+	padding: 0;
+}
+
+#exampleModal .modal-body h1{
+	color:#fff;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	position: relative;
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+#exampleModal .modal-body h1:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+	height: 3px;
+	width: 50%;
+	background-color: #fff;
+
+}
+
+#exampleModal .modal-body h2{
+	color:#fff;
+	font-size: 1.4rem;
+	font-style: italic;
+}
+
+#exampleModal img{
+	z-index: 1;
+	position: relative;
+}
+
+.close{
+	line-height: 0;
+}
+
+#exampleModal .close{
+	position: relative;
+	line-height: 0;
+	font-size: 40px;
+	opacity: 1;
+	top:30px;
+	right: 30px;
+	z-index: 3;
+	background: transparent;
+	color: #fff;
+}
+
+.map > iframe{
+	width: 100%;
+	height: 400px;
+}

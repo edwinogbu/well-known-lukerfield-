@@ -1,0 +1,78 @@
+/**
+Call to action styles
+*/
+
+.calltoaction {
+	padding-left: 0;
+	padding-right: 55px;
+
+	&.text-left {
+		padding-left: 0;
+		padding-right: 55px;
+	}
+
+	&.text-center {
+		padding: 0 55px;
+	}
+
+	&.text-right {
+		padding-right: 0;
+		padding-left: 55px;
+	}
+
+	h3 {
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #303030;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.calltoaction-button {
+		font-weight: 400;
+		font-size: 26px;
+		text-transform: uppercase;
+		color: #333;
+		background: #fff;
+		display: inline-flex;
+		align-items: center;
+
+		span.calltoaction-icon{
+			height: 50px;
+			width: 50px;
+			line-height: 50px;
+			text-align: center;
+			display: inline-block;
+			vertical-align: middle;
+			background: $theme-color;
+			color: #fff;
+			font-size: 26px;
+		}
+
+		a {
+			font-weight: 600;
+			color: $theme-color;
+			padding: 0 30px;
+		}
+	}
+}
+
+@media #{$sm-layout} {
+	.calltoaction {
+		&.text-center {
+			padding: 0;
+		}
+
+		h6 {
+			a {
+				font-size: 20px;
+			}
+		}
+
+		.calltoaction-button {
+			font-size: 18px;
+		}
+	}
+}

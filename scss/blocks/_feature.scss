@@ -1,0 +1,162 @@
+/**
+Features area styles
+*/
+.features-area {
+	div[class^="col-"] {
+		&:nth-child(even) {
+			.feature {
+				&::before {
+					background: rgba($secondary-color, 0.9);
+				}
+			}
+		}
+	}
+}
+
+.feature {
+	padding: 85px 120px;
+	@include flexbox();
+	@include align-items(center);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba($theme-color, 0.9);
+		z-index: -1;
+	}
+}
+
+.feature__icon {
+	color: #ffffff;
+	margin-right: 35px;
+	font-size: 60px;
+	height: 65px;
+	width: 65px;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+
+	span {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		@include transition(all 0.3s ease-in-out 0s);
+
+		i {
+			line-height: 65px;
+		}
+
+		&:first-child {
+			top: 0
+		}
+
+		&:last-child {
+			top: 100%
+		}
+	}
+}
+
+.feature__content {
+	@include flex-shrink(100);
+
+	h4 {
+		font-weight: 700;
+		margin-bottom: 10px;
+		color: #ffffff;
+
+		a {
+			color: #ffffff;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+		color: #ffffff;
+	}
+}
+
+.feature {
+	&:hover {
+		.feature__icon {
+			span {
+				&:first-child {
+					top: -100%;
+				}
+
+				&:last-child {
+					top: 0;
+				}
+			}
+		}
+	}
+}
+
+@media #{$xx-layout} {
+	.feature {
+		padding: 70px;
+	}
+}
+
+@media #{$xlg-layout} {
+	.feature {
+		padding: 80px 30px;
+	}
+}
+
+@media #{$lg-layout} {
+	.feature {
+		@include flex-wrap(wrap);
+		@include justify-content(center);
+		text-align: center;
+		padding: 50px 30px;
+	}
+
+	.feature__icon {
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+}
+
+@media #{$md-layout} {
+	.feature {
+		@include flex-wrap(wrap);
+		@include justify-content(center);
+		text-align: center;
+		padding: 70px 20%;
+	}
+
+	.feature__icon {
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+}
+
+@media #{$sm-layout} {
+	.feature {
+		@include flex-wrap(wrap);
+		@include justify-content(center);
+		text-align: center;
+		padding: 70px 20%;
+	}
+
+	.feature__icon {
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+}
+
+@media #{$xs-layout} {
+	.feature {
+		padding: 70px 12%;
+	}
+}

@@ -1,0 +1,102 @@
+/**
+Service Area
+*/
+
+.service {
+	@include flexbox();
+	margin-top: 30px;
+	padding: 15px;
+	padding: 25px 15px;
+	border: 1px solid $border-color-light;
+	background: $bg-grey;
+}
+
+.service__icon {
+    text-align: center;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 25px;
+    color: $theme-color;
+    height: 55px;
+    border: 1px solid $theme-color;
+	line-height: 53px;
+	@include flex(55px);
+	max-width: 55px;
+	margin-bottom: 20px;
+
+	i {
+		font-size: 24px;
+		vertical-align: text-bottom;
+	}
+
+	[class^="flaticon-"]:before,
+	[class*=" flaticon-"]:before,
+	[class^="flaticon-"]:after,
+	[class*=" flaticon-"]:after {
+		vertical-align: text-bottom;
+	}
+}
+
+.service__content {
+	@include flex-shrink(100);
+
+	h5 {
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $heading-color;
+
+		a {
+			color: $heading-color;
+
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.service {
+	&:hover {
+		.service__icon {
+			@include animation(bounceIn 0.5s ease-in-out 1 both);
+		}
+	}
+}
+
+
+@media #{$lg-layout}{
+	.service{
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+	}
+	.service__icon{
+		margin-right: 0;
+	}
+}
+
+@media #{$md-layout}{
+	.service{
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+	}
+	.service__icon{
+		margin-right: 0;
+	}
+}
+
+@media #{$sm-layout}{
+	.service{
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+	}
+	.service__icon{
+		margin-right: 0;
+	}
+}

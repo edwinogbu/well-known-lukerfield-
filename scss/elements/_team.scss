@@ -1,0 +1,127 @@
+/**
+ * Team Styels
+ */
+
+.team {
+    margin-top: 30px;
+}
+
+.team__header {
+    position: relative;
+}
+
+.team__image {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: $theme-color;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(all 0.3s ease-in-out 0s);
+    }
+}
+
+.team__social {
+    position: absolute;
+    bottom: 27px;
+    left: 30px;
+
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+
+        li {
+            margin: 15px 0;
+            @include transform(translateX(-60px));
+            opacity: 0;
+            visibility: hidden;
+            @include transition(all 0.3s ease-out);
+
+            @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                    @include transition-delay(#{($i + 1) * 0.12}s);
+                }
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                display: inline-block;
+                color: #fff;
+                font-size: 16px;
+                line-height: 24px;
+                height: 35px;
+                width: 35px;
+                line-height: 33px;
+                border-radius: 100px;
+                text-align: center;
+                border: 1px solid #fff;
+
+                &:hover {
+                    background: $secondary-color;
+                    color: #ffffff;
+                    border-color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+.team__content {
+    background: #ffffff;
+    text-align: center;
+    padding: 30px 15px;
+    border: 1px solid $border-color-light;
+
+    h5 {
+        margin-bottom: 2px;
+
+        a {
+            color: $heading-color;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        color: #a0a0a0;
+    }
+}
+
+
+.team {
+    &:hover {
+        .team__image {
+            &:before {
+                opacity: 0.85;
+                visibility: visible;
+            }
+        }
+
+        .team__social {
+            ul {
+                li {
+                    opacity: 1;
+                    visibility: visible;
+                    @include transform(translateX(0));
+                }
+            }
+        }
+    }
+}
